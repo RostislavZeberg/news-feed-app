@@ -31,19 +31,19 @@
 ```bash
 git clone https://github.com/ваш-username/news-feed-app.git
 cd news-feed-app
-2. Установка зависимостей
+### 2. Установка зависимостей
 bash
 npm install
 # или
 yarn install
-3. Запуск в development-режиме
+### 3. Запуск в development-режиме
 bash
 npm run dev
 # или
 yarn dev
 Приложение будет доступно по адресу: http://localhost:3000
 
-4. Production-сборка
+### 4. Production-сборка
 bash
 npm run build
 npm start
