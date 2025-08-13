@@ -22,3 +22,6 @@ cd news-feed-app
 npm install
 
 ### 2. Development
+```bash
+npm run dev
+# Открыть http://localhost:3000
