@@ -36,6 +36,7 @@ bash
 npm install
 # или
 yarn install
+
 ### 3. Запуск в development-режиме
 bash
 npm run dev
