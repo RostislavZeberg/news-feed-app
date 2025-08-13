@@ -1,0 +1,18 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.endMessage {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-style: italic;
+}

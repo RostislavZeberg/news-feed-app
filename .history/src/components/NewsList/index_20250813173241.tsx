@@ -1,0 +1,59 @@
+'use client';
+
+import { useEffect } from 'react';
+import { Spin, Alert } from 'antd';
+import NewsCard from '@/components/NewsCard';
+import useInfiniteScroll from '@/hooks/useInfiniteScroll';
+import { loadNews, setInitialData } from '@/store/features/newsSlice';
+import { useAppDispatch, useAppSelector } from '@/store/hooks';
+
+export default function NewsList({ initialPosts }: { initialPosts: any[] }) {
+  const { items, loading, error, hasMore } = useAppSelector(
+    (state) => state.news
+  );
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    // Устанавливаем начальные данные с сервера
+    dispatch(setInitialData(initialPosts));
+  }, [dispatch, initialPosts]);
+
+  const loadMore = () => {
+    if (hasMore && !loading) {
+      dispatch(loadNews());
+    }
+  };
+
+  useInfiniteScroll(loadMore);
+
+  return (
+    <div className="max-w-3xl mx-auto">
+      {items.map((news) => (
+        <NewsCard key={news.id} news={news} className="mb-6" />
+      ))}
+
+      {loading && (
+        <div className="text-center my-8">
+          <Spin size="large" />
+        </div>
+      )}
+
+      {error && (
+        <Alert
+          message="Error"
+          description={error}
+          type="error"
+          showIcon
+          closable
+          className="my-4"
+        />
+      )}
+
+      {!hasMore && !loading && items.length > 0 && (
+        <div className="text-center text-gray-500 my-8">
+          No more news to load
+        </div>
+      )}
+    </div>
+  );
+}

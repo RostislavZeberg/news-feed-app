@@ -1,0 +1,27 @@
+.card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  margin-bottom: 12px !important;
+  color: #1890ff;
+}
+
+.body {
+  color: #666;
+  margin-bottom: 16px !important;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.reactions {
+  font-weight: bold;
+  color: #ff4d4f;
+}
