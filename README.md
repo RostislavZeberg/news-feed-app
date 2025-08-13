@@ -20,7 +20,6 @@
 git clone https://github.com/ваш-username/news-feed-app.git
 cd news-feed-app
 npm install
-
 ### 2. Development
 ```bash
 npm run dev
