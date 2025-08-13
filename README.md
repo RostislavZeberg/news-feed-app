@@ -31,6 +31,7 @@
 ```bash
 git clone https://github.com/ваш-username/news-feed-app.git
 cd news-feed-app
+
 ### 2. Установка зависимостей
 bash
 npm install
@@ -64,6 +65,7 @@ text
 │   └── store.ts          # Конфигурация хранилища
 ├── types/                # TypeScript-типы
 └── hooks/                # Кастомные хуки
+
 🔧 Конфигурация
 Environment Variables
 Создайте файл .env.local в корне проекта:
@@ -76,6 +78,7 @@ NEXT_PUBLIC_API_URL=https://dummyjson.com
 
 typescript
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://dummyjson.com';
+
 🧪 Тестирование
 Запуск линтеров:
 
