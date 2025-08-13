@@ -1,3 +1,4 @@
+// next.config.js
 import type { NextConfig } from "next";
 
 /**
@@ -13,6 +14,7 @@ const nextConfig: NextConfig = {
   // Дополнительные параметры (опционально):
   compress: true, // Включает gzip-сжатие
   productionBrowserSourceMaps: false, // Отключает source maps в production для браузера
+  swcMinify: true, // Использует SWC для минификации (быстрее чем Terser)
 };
 
 export default nextConfig;
